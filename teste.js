@@ -37,3 +37,40 @@ console.log("\n");
 console.log(mtdUtilitario);
 */
 
+
+/*
+const ehPar = (valor) => {
+    return valor % 2 === 0;
+}
+console.log(ehPar(10));
+
+
+let dois = () => console.log(2);
+dois()
+
+const soma = (a, b) => console.log(a + b);
+soma(2, 3);
+
+function f (){
+    let nome = "Joao";
+    function g(){
+        console.log(nome);
+    }
+    g();
+}
+f();
+*/
+// f(1)  eh determinado que 'f is not defined'
+
+
+function demorada(tempo) {
+    console.log(`demorada ${tempo}`);
+    const atualMaisTempo = new Date().getTime() + tempo;
+    while (new Date().getTime() <= atualMaisTempo);
+    const d = 8 + 4 ;
+    return d;
+}
+
+setTimeout(function(){demorada(2000)}, 2000);
+setTimeout(function(){demorada(1000)}, 1000);
+console.log("Fim do script principal");
